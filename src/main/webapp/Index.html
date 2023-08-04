@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>One Hundred Shop</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" type="text/css" media="all"
+	href="css/FormStyle.css" />
+
+<script src="utils.js" charset="utf-8" defer></script>
+<script src="login.js" charset="utf-8" defer></script>
+<script src="registerManagement.js" charset="utf-8" defer></script>
+
+</head>
+
+<body onload="showLogin()">
+
+	<div class="wrapper">
+
+		<div class="form">
+			<div class="form_inner">
+
+				<!-- Login Page -->
+
+				<form id="loginbutton" action="#">
+					<label class="title_label">One Hundred Shop</label> <label
+						class="error" id="errorAuth"></label>
+					<div class="div_input_cell">
+						<label class="input_label" for="email">Email</label> <input
+							class="input_cell" type="email" name="email" id="email"
+							placeholder="Enter your email" required>
+					</div>
+					<div class="div_input_cell">
+						<label class="input_label" for="password">Password</label> <input
+							class="input_cell" type="password" name="password" id="password"
+							placeholder="Enter your password" required>
+
+					</div>
+					<button class="form_loginbutton" id="loginButton">Login</button>
+
+
+					<label class="input_label" style="margin-top: 20px"> Don't
+						have an account? <a href="#" onclick="showRegister()">Register
+							new account</a>
+
+					</label>
+				</form>
+
+
+
+				<!-- register Page -->
+
+
+				<form id="registerbutton" action="#">
+					<p class="error" id="errorReg"></p>
+					<fieldset>
+						<div class="div_input_cell">
+							<label class="input_label">Email</label> <input type="email"
+								name="email_reg" id="email_reg" placeholder="E-mail"
+								class="input_cell" required>
+
+						</div>
+
+						<input class="form_nextbutton" type="button" value="next"
+							name="next">
+					</fieldset>
+					<fieldset>
+						<div class="div_input_cell">
+							<label class="input_label">Name</label> <input type="text"
+								name="name_reg" id="name_reg" placeholder="Name"
+								class="input_cell" required>
+						</div>
+
+						<div class="div_input_cell">
+							<label class="input_label">Surname</label> <input type="text"
+								name="surname_reg" id="surname_reg" placeholder="Surname"
+								class="input_cell" required>
+						</div>
+						<input class="form_backbutton" type="button" value="back"
+							name="back"> <input class="form_nextbutton" type="button"
+							value="next" name="next">
+					</fieldset>
+					<fieldset>
+						<div class="div_input_cell">
+							<label class="input_label">Password</label> <input
+								type="password" name="password_reg" id="password_reg"
+								placeholder="Password" class="input_cell" required>
+
+						</div>
+
+						<div class="div_input_cell">
+							<label class="input_label">Confirm password</label> <input
+								type="password" name="password_conf_reg" id="password_conf_reg"
+								placeholder="Confirm password" class="input_cell" maxlength="45"
+								required>
+
+
+						</div>
+
+						<input class="form_backbutton" type="button" value="back"
+							name="back"> <input class="form_nextbutton" type="button"
+							value="next" name="next">
+					</fieldset>
+					<fieldset>
+						<div class="div_input_cell">
+							<label class="input_label">Address</label> <input type="text"
+								name="address_reg" id="address_reg" placeholder="Address"
+								class="input_cell" required>
+
+						</div>
+
+						<div class="div_input_cell">
+							<label class="input_label">Card Number</label> <input type="text"
+								name="card_number_reg" id="card_number_reg"
+								placeholder="Card Number" class="input_cell" maxlength="16"
+								required>
+
+						</div>
+
+						<div class="form_row">
+							<div class="form_col">
+								<div class="form_group">
+									<label class="input_label">Expiration Date</label> <select
+										class="input_cell -select" id="month_reg" name="month_reg"
+										required>
+
+										<option value="Month" disabled selected>Month</option>
+										<option value="01">Jan</option>
+										<option value="02">Feb</option>
+										<option value="03">Mar</option>
+										<option value="04">Apr</option>
+										<option value="05">May</option>
+										<option value="06">Jun</option>
+										<option value="07">Jul</option>
+										<option value="08">Aug</option>
+										<option value="09">Sep</option>
+										<option value="10">Oct</option>
+										<option value="11">Nov</option>
+										<option value="12">Dec</option>
+									</select> <select class="input_cell -select" id="year_reg"
+										name="year_reg" required>
+										<option value="Year" disabled selected>Year</option>
+										<option value="2023">2023</option>
+										<option value="2024">2024</option>
+										<option value="2025">2025</option>
+										<option value="2026">2026</option>
+										<option value="2027">2027</option>
+										<option value="2028">2028</option>
+										<option value="2029">2029</option>
+										<option value="2030">2030</option>
+									</select>
+
+								</div>
+							</div>
+
+							<div class="imput-cell__col -cvv">
+								<div class="div_input_cell">
+									<label class="input_label">CVV</label> <input type="text"
+										name="card_cvv_reg" id="card_cvv_reg" placeholder="CVV"
+										class="input_cell" maxlength="3" required>
+
+								</div>
+							</div>
+
+						</div>
+						<input class="form_backbutton" type="button" value="back"
+							name="back"> <input class="form_submitbutton"
+							type="button" value="Submit" name="submit" id="RegButton">
+					</fieldset>
+
+					<a href="#" onclick="showLogin()" class="back_button">Back to
+						Login </a>
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		var currentForm = 'login';
+
+		function showLogin() {
+			document.getElementById("loginbutton").style.display = "block";
+			document.getElementById("registerbutton").style.display = "none";
+		}
+
+		function showRegister() {
+			document.getElementById("loginbutton").style.display = "none";
+			document.getElementById("registerbutton").style.display = "block";
+		}
+
+		function toggleForm() {
+			if (currentForm === 'login') {
+				showRegister();
+			} else {
+				showLogin();
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>OneHundredShop</title>
+
+<link href="css/HomeStyle.css" rel="stylesheet" type="text/css"
+	media="all" />
+<script src="utils.js" charset="utf-8" defer></script>
+<script src="shopManagement.js" charset="utf-8" defer></script>
+<script src="cartManagement.js" charset="utf-8" defer></script>
+</head>
+
+<!--Bar Menu-->
+
+<body>
+
+	<div class="bar">
+		<label class="title_label">- - - One Hundred Shop - - -</label>
+		<div class="bar_pos" id="id_menu">
+
+			<!-- menu-->
+
+		</div>
+
+		<div class="user_menu">
+
+			<button class="user">
+				<p id="UserTag">
+					<span id="name"></span>
+				<p>
+			</button>
+			<div class="menu_select">
+				<a id="BackLogin" href="Logout">Logout</a>
+			</div>
+		</div>
+
+	</div>
+	<!----------------------------------------------------------------->
+
+
+	<!---------------------- Home Page -------------------------------->
+
+	<form id="id_search" class="bar_search" action="#">
+		<input class="input_search" type="text" name="search" id="search"
+			placeholder="Search Product"> <input class="button_search"
+			type="button" name="Search" id="searchButton" value="Search">
+	</form>
+
+
+	<section class="main_page" id="id_home">
+
+		<!-- last seen -->
+
+	</section>
+
+	<!-------------------------- Result Page --------------------->
+
+	<section id="id_result" class="results_section"></section>
+
+
+
+
+	<!----------------------- Order Page ----------------------------->
+
+	<section id="id_order"></section>
+
+	<!-------------------------- Cart Page --------------------->
+
+	<section id="id_cart"></section>
+
+
+
+
+	<!--Page End-->
+	<br>
+	<footer>
+		<p>&copy; 100-Shop</p>
+	</footer>
+
+
+</body>
+</html>
