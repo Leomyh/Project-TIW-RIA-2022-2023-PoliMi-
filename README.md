@@ -4,3 +4,6 @@ Anno Accademico: 2022/2023.
 
 Computer Engineering Project(version RIA) for the course: "Technologies for the Web" at "Politecnico di Milano".  
 Academic Year: 2022/2023.
+
+to pureHTML version:
+https://github.com/Leomyh/Project-TIW-pureHTML-2022-2023-PoliMi-
